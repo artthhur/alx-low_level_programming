@@ -4,20 +4,16 @@
  * @s: memory area pointed to by s
  * @b: constant value 
  * @n: number of byte
- * Return: pointer to the memory area
+ * Return: pointer to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int size = n;
+	char *p = s;
 
-	if (size > 0)
+	while (n-- > 0)
 	{
-		int i;
-
-		for (i = 0; i < size; i++)
-		{
-			s[i] = b;
-		}
+		*p++  =  b;
 	}
+
 	return (s);
 }
