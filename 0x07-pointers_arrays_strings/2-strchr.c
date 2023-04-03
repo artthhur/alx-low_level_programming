@@ -4,17 +4,18 @@
  * _strchr - function that locates a charachter in string
  * @s: string
  * @c: character
- * Return: pointer o the first ocuurence of the character c
+ * Return: pointer o the first ocuurence of the character c in string s
+ * or NULL if not found
  */
 char *_strchr(char *s, char c)
 {
-int k = 0
-
-while (s[k] != '\0' && s[k] != c)
-k++;
-
-if (s[k] == c)
-return (&s[k]);
-else
-return (NULL);
+	while (*s != '\0')
+	{
+		if (*s ==c)
+			return (s);
+		s++;
+	}
+	if (*s == c)
+		return (s);
+	return (NULL);
 }
