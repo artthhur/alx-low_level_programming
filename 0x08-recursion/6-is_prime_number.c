@@ -26,7 +26,7 @@ int is_prime_number(int n)
 	if (n == 0)
 		return (1);
 
-	else if (n % 2 == || n < 2)
+	else if (n % 2 == 0 || n < 2)
 		return (0);
 	else
 		return (check_if_prime(n, d));
