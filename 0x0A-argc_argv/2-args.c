@@ -1,15 +1,12 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - pritns all the arguments
- *
+ * main - function main
  * @argc: number of arguments
- * @argv: array of pointers to the arguments
- *
+ * @argv: array of arguments
  * Return: always 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i;
 
