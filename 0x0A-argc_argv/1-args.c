@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[] __attribute((unused)))
 {
-	int (argc > 0)
+	if (argc > 0)
 		printf("%d\n", argc - 1);
 	return (o);
 }
