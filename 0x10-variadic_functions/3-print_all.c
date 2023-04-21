@@ -9,22 +9,22 @@ void print_all(const char * const format, ...)
 	char *s, *sp = "";
 	va_list args;
 
-	va_start(args, fromat);
+	va_start(args, format);
 
-	if (fromat)
+	if (format)
 	{
-		while (fromat[i])
+		while (format[i])
 		{
-			switch (fromat[i])
+			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", sp, va_args(args, int));
+					printf("%s%c", sp, va_arg(args, int));
 					break;
 				case 'i':
 					printf("%s%i", sp, va_arg(args, int));
 					break;
 				case 'f':
-					printf("%s%f", sp, var_arg(args, double));
+					printf("%s%f", sp, va_arg(args, double));
 					break;
 				case 's':
 					s = va_arg(args, char *);
