@@ -48,7 +48,7 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		number_list++;
 		l = mem(l, number_list, head);
-		printf("[%p] %d\n", (void *)head, head->number_list);
+		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
 	free(l);
