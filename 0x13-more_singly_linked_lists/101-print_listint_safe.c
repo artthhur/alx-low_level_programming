@@ -19,7 +19,7 @@ const listint_t **mem(const listint_t **l, size_t size, const listint_t *newnd)
 		exit(98);
 	}
 	for (i = 0; i < size - 1; i++)
-		newl[i] = l[i];
+		new_list[i] = l[i];
 	new_list[i] = new_node;
 	free(l);
 	return (new_list);
