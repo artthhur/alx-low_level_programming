@@ -33,24 +33,24 @@ const listint_t **mem(const listint_t **l, size_t size, const listint_t *newnd)
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i, number_list = 0;
-	const listint_t **List = NULL;
+	const listint_t **l = NULL;
 
 	while (head != NULL)
 	{
 		for (i = 0; i < number_list; i++)
 		{
-			if (head == List[i])
+			if (head == l[i])
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				free(List);
+				free(l);
 				return (number_list);
 			}
 		}
 		number_list++;
-		List = mem(List, number_list, head);
+		l = mem(l, number_list, head);
 		printf("[%p] %d\n", (void *)head, head->number_list);
 		head = head->next;
 	}
-	free(List);
+	free(l);
 	return (number_list);
 }
