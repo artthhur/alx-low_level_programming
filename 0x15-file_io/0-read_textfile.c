@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	lenr = read(filep, buffer, letters);
-	close(ptfile);
+	close(filep);
 	if (lenr == -1)
 	{
 		free(buffer);
