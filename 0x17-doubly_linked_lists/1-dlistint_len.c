@@ -6,9 +6,9 @@
  *
  * Return: The number of elements in the list.
  */
-size_t dlistint_len(const dlistint_t *head)
+size_t dlistint_len(const dlistint_t *h)
 {
-	const dlistint_t *current_node = head;
+	const dlistint_t *current_node = h;
 	size_t element_count = 0;
 
 	while (current_node != NULL)
